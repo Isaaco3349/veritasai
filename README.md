@@ -53,6 +53,16 @@ Execute TX    Flag + Freeze
 ```
 
 ---
+## Deployed Contracts — Redbelly Testnet
+
+| Contract | Address |
+|---|---|
+| KYCSentinel | `0xC2aDD96dCc3D86F37A7aaEE195F9E49b636fDF8a` |
+| AMLWatchtower | `0xD617B048569bed25288360A7e3De04D7e93C37a9` |
+| AutoAuditLedger | `0x7af5011E661C1A06c08656ae259BBBf0d76896ED` |
+| ComplianceEngine | `0x83b7C20d15f6516f057c93772cbC56cd760EC839` |
+
+🔍 Verify on [Redbelly Testnet Explorer](https://redbelly.testnet.routescan.io)
 
 ## Repo Structure
 
@@ -105,7 +115,7 @@ veritasai/
 ### Install
 
 ```bash
-git clone https://github.com/your-handle/veritasai
+git clone https://github.com/Isaaco3349/veritasai
 cd veritasai
 npm install
 cp .env.example .env
@@ -188,7 +198,7 @@ Each agent runs as a TypeScript service, queries off-chain data sources, and sub
 ```env
 # Redbelly Network
 REDBELLY_TESTNET_RPC=https://governors.testnet.redbelly.network
-REDBELLY_MAINNET_RPC=https://governors.redbelly.network
+REDBELLY_MAINNET_RPC=https://governors.mainnet.redbelly.network
 DEPLOYER_PRIVATE_KEY=your_private_key_here
 
 # AI Agent Config
@@ -206,7 +216,7 @@ NEXT_PUBLIC_COMPLIANCE_ENGINE_ADDRESS=0x...
 
 | Phase | Milestone | Status |
 |-------|-----------|--------|
-| v1 | Core contracts + 3 agents deployed on testnet | 🔨 In progress |
+| v1 | Core contracts + 3 agents deployed on testnet | ✅ Complete |
 | v2 | RegReportBot + PDF export | 📋 Planned |
 | v3 | Multi-jurisdiction policy configs | 📋 Planned |
 | v4 | zkSNARK-native agent attestations | 📋 Planned |
