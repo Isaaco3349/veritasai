@@ -5,7 +5,9 @@
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/Isaaco3349/veritasai)
 [![Network](https://img.shields.io/badge/network-Redbelly-red)](https://redbelly.network)
 [![Stack](https://img.shields.io/badge/stack-Solidity%20%2B%20TypeScript-purple)](https://github.com/Isaaco3349/veritasai)
-[![Status](https://img.shields.io/badge/status-v1--alpha-orange)](https://github.com/Isaaco3349/veritasai)
+[![Status](https://img.shields.io/badge/status-v2--live-green)](https://veritasai-kohl.vercel.app)
+
+🌐 **Live Dashboard**: https://veritasai-kohl.vercel.app/
 
 ---
 
@@ -72,20 +74,21 @@ Execute TX    Flag + Freeze
 
 ## Features
 
-### Live Now
+### Live Now ✅
 - ✅ Smart contracts deployed on Redbelly testnet
 - ✅ KYC, AML, and Audit agents (TypeScript)
 - ✅ On-chain compliance verdict system
 - ✅ Full audit trail logged on Redbelly ledger
+- ✅ **Live Compliance Dashboard** — Real-time KYC/AML status, risk scores, and verdicts in one interface
+- ✅ **Wallet Compliance Checker** — Paste any wallet address, get a full compliance report instantly
+- ✅ **Risk Score Visualizer** — Charts showing wallet risk scores over time for pattern detection
+- ✅ **On-Chain Audit Trail Viewer** — Every agent decision linked to a Redbelly explorer transaction
+- ✅ **Multi-Jurisdiction Policy Engine** — Configure compliance rules per jurisdiction (US, EU, UAE and more)
+- ✅ **Deployed Contracts UI** — Full transparency, verify any contract on the explorer
 
-### Coming Soon
-- 🔨 **Live Compliance Dashboard** — Real-time KYC/AML status, risk scores, and verdicts in one interface
-- 🔨 **Wallet Compliance Checker** — Paste any wallet address, get a full compliance report instantly
-- 🔨 **Risk Score Visualizer** — Charts showing wallet risk scores over time for pattern detection
-- 🔨 **On-Chain Audit Trail Viewer** — Every agent decision linked to a Redbelly explorer transaction
+### Coming Soon 🔨
 - 🔨 **Compliance Report Generator** — One-click PDF reports ready for regulators and auditors
 - 🔨 **RWA Issuance Compliance Gate** — Smart contract blocks issuance if issuer fails compliance checks
-- 🔨 **Multi-Jurisdiction Policy Engine** — Configure compliance rules per jurisdiction (US, EU, UAE and more)
 
 ---
 
@@ -113,7 +116,7 @@ veritasai/
 ├── scripts/
 │   ├── deploy.ts                     # Deploy all contracts
 │   └── registerAgent.ts             # Register agents on-chain
-├── dashboard/                        # Frontend (in development)
+├── dashboard/                        # Live frontend — Next.js + Tailwind
 ├── .env.example
 ├── hardhat.config.ts
 ├── package.json
@@ -154,9 +157,11 @@ npx hardhat test
 npx hardhat run scripts/deploy.ts --network redbelly-testnet
 ```
 
-### Register Agents
+### Run Dashboard Locally
 ```bash
-npx hardhat run scripts/registerAgent.ts --network redbelly-testnet
+cd dashboard
+npm install
+npm run dev
 ```
 
 ---
@@ -184,10 +189,10 @@ NEXT_PUBLIC_COMPLIANCE_ENGINE_ADDRESS=0x83b7C20d15f6516f057c93772cbC56cd760EC839
 | Phase | Milestone | Status |
 | --- | --- | --- |
 | v1 | Core contracts + 3 agents deployed on testnet | ✅ Complete |
-| v2 | Live compliance dashboard + wallet checker + risk visualizer | 🔨 In Progress |
-| v3 | Audit trail viewer + PDF compliance report generator | 📋 Planned |
-| v4 | RWA issuance compliance gate + multi-jurisdiction policy engine | 📋 Planned |
-| v5 | Mainnet deployment + regulator dashboard (live) | 📋 Planned |
+| v2 | Live compliance dashboard + wallet checker + risk visualizer + audit trail viewer + multi-jurisdiction engine | ✅ Complete |
+| v3 | PDF compliance report generator | 🔨 In Progress |
+| v4 | RWA issuance compliance gate | 📋 Planned |
+| v5 | Mainnet deployment + full regulator dashboard | 📋 Planned |
 
 ---
 
@@ -197,7 +202,8 @@ NEXT_PUBLIC_COMPLIANCE_ENGINE_ADDRESS=0x83b7C20d15f6516f057c93772cbC56cd760EC839
 - **Hardhat** — Smart contract development
 - **ethers.js** — Contract interaction
 - **TypeScript** — Agent services
-- **React / Next.js** — Frontend dashboard (in development)
+- **Next.js + Tailwind CSS** — Frontend dashboard
+- **Vercel** — Deployment
 
 ---
 
